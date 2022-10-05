@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustStreamIt - Tu ne sais pas quoi regarder pour passer une bonne soirée ? Alors JustStreamIt</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <header id="header" class="header">
+        <img class="header__logo" src="public/img/just_stream_it_logo.png" alt="Logo de Just Stream It">
+        <nav class="nav">
+            <ul>
+                <li class="nav__link"><a href="#header">Accueil</a></li>
+                <li class="nav__link"><a href="#highestScores">Meilleurs notes</a></li>
+                <li class="nav__link"><a href="#action">Action</a></li>
+                <li class="nav__link"><a href="#thriller">Thriller</a></li>
+                <li class="nav__link"><a href="#comedy">Comédie</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div id="bestMovie">
+            <img class="bestMovieImage" src="" alt="">
+            <h3 class="bestMovieTitle"></h3>
+            <input class="bestMovieInfo" type="button" value="Détails">
+            <p class="bestMovieDesc"></p>
+        </div>
+    </section>
+    <section id="highestScores" class="category">
+        <h2 class="category__title">Films les mieux notés</h2>
+        <div class="category__carousel">
+            <img src="public/img/left-arrow.svg" class="carousel__left">
+            <div class="slide">
+                <img class="highestScoresMoviesImage category__item item1" src="" alt="">
+                <img class="highestScoresMoviesImage category__item item2" src="" alt="">
+                <img class="highestScoresMoviesImage category__item item3" src="" alt="">
+                <img class="highestScoresMoviesImage category__item item4" src="" alt="">
+                <img class="highestScoresMoviesImage category__item item5" src="" alt="">
+                <img class="highestScoresMoviesImage category__item item6" src="" alt="">
+                <img class="highestScoresMoviesImage category__item item7" src="" alt="">
+            </div>
+            <img src="public/img/right-arrow.svg" class="carousel__right">
+        </div>
+    </section>
+    <section id="action" class="category">
+        <h2 class="category__title">Catégorie: Action</h2>
+        <div class="category__carousel">
+            <img src="public/img/left-arrow.svg" class="carousel__left">
+            <div class="slide">
+                <img class="actionMoviesImage category__item item1" src="" alt="">
+                <img class="actionMoviesImage category__item item2" src="" alt="">
+                <img class="actionMoviesImage category__item item3" src="" alt="">
+                <img class="actionMoviesImage category__item item4" src="" alt="">
+                <img class="actionMoviesImage category__item item5" src="" alt="">
+                <img class="actionMoviesImage category__item item6" src="" alt="">
+                <img class="actionMoviesImage category__item item7" src="" alt="">
+            </div>
+            <img src="public/img/right-arrow.svg" class="carousel__right">
+        </div>
+    </section>
+    <section id="thriller" class="category">
+        <h2 class="category__title">Catégorie: Thriller</h2>
+        <div class="category__carousel">
+            <img src="public/img/left-arrow.svg" class="carousel__left">
+            <div class="slide">
+                <img class="thrillerMoviesImage category__item item1" src="" alt="">
+                <img class="thrillerMoviesImage category__item item2" src="" alt="">
+                <img class="thrillerMoviesImage category__item item3" src="" alt="">
+                <img class="thrillerMoviesImage category__item item4" src="" alt="">
+                <img class="thrillerMoviesImage category__item item5" src="" alt="">
+                <img class="thrillerMoviesImage category__item item6" src="" alt="">
+                <img class="thrillerMoviesImage category__item item7" src="" alt="">
+            </div>
+            <img src="public/img/right-arrow.svg" class="carousel__right">
+        </div>
+    </section>
+    <section id="comedy" class="category">
+        <h2 class="category__title">Catégorie: Comédie</h2>
+        <div class="category__carousel">
+            <img src="public/img/left-arrow.svg" class="carousel__left">
+            <div class="slide">
+                <img class="comedyMoviesImage category__item item1" src="" alt="">
+                <img class="comedyMoviesImage category__item item2" src="" alt="">
+                <img class="comedyMoviesImage category__item item3" src="" alt="">
+                <img class="comedyMoviesImage category__item item4" src="" alt="">
+                <img class="comedyMoviesImage category__item item5" src="" alt="">
+                <img class="comedyMoviesImage category__item item6" src="" alt="">
+                <img class="comedyMoviesImage category__item item7" src="" alt="">
+            </div>
+            <img src="public/img/right-arrow.svg" class="carousel__right">
+        </div>
+    </section>
+    <div id="modalWindow" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Détails du film</h2>
+            </div>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="">
+                <p id="modal-title"></p>
+                <p id="modal-category"></p>
+                <p id="modal-date"></p>
+                <p id="modal-rate"></p>
+                <p id="modal-lmdb"></p>
+                <p id="modal-director"></p>
+                <p id="modal-actor"></p>
+                <p id="modal-duration"></p>
+                <p id="modal-country"></p>
+                <p id="modal-boxoffice"></p>
+                <p id="modal-summary"></p>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
