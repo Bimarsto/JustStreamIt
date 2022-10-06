@@ -30,7 +30,7 @@ document.querySelectorAll(".carousel__left").forEach(item => {
     item.addEventListener('click', event => {
         item.parentElement.getElementsByTagName("div")[0].scrollBy(-312,0);
     })
-})
+});
 
 //meilleur film + 4 preimers films les mieux notés
 fetch(url + uriAllTopRated)
@@ -50,11 +50,11 @@ fetch(url + uriAllTopRated)
         
         // films les mieux notés
         for (let i=0; i<4; i++) {
-            highestScoresMoviesImage[i].setAttribute("src", data.results[i+1].image_url)
+            highestScoresMoviesImage[i].src = data.results[i+1].image_url
             highestScoresMoviesImage[i].setAttribute("alt", "Affiche du film " + data.results[i+1].title)
             highestScoresMoviesImage[i].setAttribute("target", data.results[i+1].url)
         }
-    })
+    });
 
 // suite des meilleurs films les mieux notés (3)
 fetch(url + uriAllTopRated + "&page=2")
@@ -66,7 +66,7 @@ fetch(url + uriAllTopRated + "&page=2")
             highestScoresMoviesImage[i].setAttribute("alt", "Affiche du film " + data.results[i-4].title)
             highestScoresMoviesImage[i].setAttribute("target", data.results[i-4].url)
         }
-    })
+    });
 
 // 5 films d'action les mieux notés
 fetch(url + uriActionTopRated)
@@ -78,7 +78,7 @@ fetch(url + uriActionTopRated)
             actionMoviesImage[i].setAttribute("alt", "Affiche du film " + data.results[i].title)
             actionMoviesImage[i].setAttribute("target", data.results[i].url)
         }
-    })
+    });
 
 // suite des films d'action les mieux notés (2)
 fetch(url + uriActionTopRated + "&page=2")
@@ -90,7 +90,7 @@ fetch(url + uriActionTopRated + "&page=2")
             actionMoviesImage[i].setAttribute("alt", "Affiche du film " + data.results[i-5].title)
             actionMoviesImage[i].setAttribute("target", data.results[i-5].url)
         }
-    })
+    });
 
 // 5 films thriller les mieux notés
 fetch(url + uriThrillerRated)
@@ -102,7 +102,7 @@ fetch(url + uriThrillerRated)
             thrillerMoviesImage[i].setAttribute("alt", "Affiche du film " + data.results[i].title)
             thrillerMoviesImage[i].setAttribute("target", data.results[i].url)
         }
-    })
+    });
 
 // suite des films thriller les mieux notés (2)
 fetch(url + uriThrillerRated + "&page=2")
@@ -114,7 +114,7 @@ fetch(url + uriThrillerRated + "&page=2")
             thrillerMoviesImage[i].setAttribute("alt", "Affiche du film " + data.results[i-5].title)
             thrillerMoviesImage[i].setAttribute("target", data.results[i-5].url)
         }
-    })
+    });
 
 // 5 comédies les mieux notés
 fetch(url + uriComedyRated)
@@ -126,7 +126,7 @@ fetch(url + uriComedyRated)
             comedyMoviesImage[i].setAttribute("alt", "Affiche du film " + data.results[i].title)
             comedyMoviesImage[i].setAttribute("target", data.results[i].url)
         }
-    })
+    });
 
 // suite des comédies les mieux notés (2)
 fetch(url + uriComedyRated + "&page=2")
@@ -138,32 +138,43 @@ fetch(url + uriComedyRated + "&page=2")
             comedyMoviesImage[i].setAttribute("alt", "Affiche du film " + data.results[i-5].title)
             comedyMoviesImage[i].setAttribute("target", data.results[i-5].url)
         }
-    })
+    });
 
 // Fenetre modal
 var modal = document.getElementById("modalWindow");
-var btn = document.getElementsByClassName("bestMovieInfo")[0];
+
 var span = document.getElementsByClassName("close")[0];
+
+var btn = document.getElementsByClassName("bestMovieInfo")[0];
+
+
+
+
+
+
+
 
 document.querySelectorAll(".category__item").forEach(item => {
     item.addEventListener('click', event => {
-        console.log(item.getAttribute("target"))
+        console.log(item)
         modalInfos(item.getAttribute("target"))
     })
-})
+});
+
 btn.onclick = function() {
+    
     modalInfos(btn.getAttribute("target"))
-}
+};
 
 span.onclick = function() {
     modal.style.display = "none";
-}
+};
 
 window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
     }
-}
+};
 
 function modalInfos(target) {
     const image = document.getElementById("modal-image");
@@ -208,4 +219,5 @@ function modalInfos(target) {
             }
             summary.innerHTML = "<strong>Résumé : </strong>" + data.description;
         })
-}
+};
+

@@ -232,6 +232,7 @@ body {
 .category__carousel {
   width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .category__carousel .carousel__left {
