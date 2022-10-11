@@ -1,0 +1,47 @@
+@import "../utils/variables";
+
+.category__carousel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .carousel__left {
+        height: 50px;
+        margin-left: 50px;
+        padding: 10px;
+        background-color: $colour-accent;
+        border-radius: 10px;
+    }
+    .slide {
+        margin: 10px 50px;
+        display: flex;
+        overflow:scroll;
+        scroll-behavior: smooth;
+        .category__item {
+            border: 5px solid $colour-secondary;
+            height: 400px;
+            min-height: 400px;
+            margin: 10px;
+            z-index: 1;
+        }
+       
+    }
+    .carousel__right {
+        height: 50px;
+        margin-right: 50px;
+        padding: 10px;
+        background-color: $colour-accent;
+        border-radius: 10px;
+    }
+}
+
+::-webkit-scrollbar{
+        display: none;
+    }
+
+
+
+
+
+
+

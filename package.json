@@ -1,0 +1,19 @@
+{
+  "name": "juststreamit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style expanded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bimarsto/JustStreamIt.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bimarsto/JustStreamIt/issues"
+  },
+  "homepage": "https://github.com/Bimarsto/JustStreamIt#readme"
+}

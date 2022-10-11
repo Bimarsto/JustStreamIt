@@ -142,27 +142,16 @@ fetch(url + uriComedyRated + "&page=2")
 
 // Fenetre modal
 var modal = document.getElementById("modalWindow");
-
 var span = document.getElementsByClassName("close")[0];
-
 var btn = document.getElementsByClassName("bestMovieInfo")[0];
-
-
-
-
-
-
-
 
 document.querySelectorAll(".category__item").forEach(item => {
     item.addEventListener('click', event => {
-        console.log(item)
         modalInfos(item.getAttribute("target"))
     })
 });
 
 btn.onclick = function() {
-    
     modalInfos(btn.getAttribute("target"))
 };
 
@@ -217,7 +206,13 @@ function modalInfos(target) {
             for(let i=0;i<data.countries.length;i++){
                 country.innerHTML += "<li>" + data.countries[i] + "</li>"
             }
-            summary.innerHTML = "<strong>Résumé : </strong>" + data.description;
+            if (data.worldwide_gross_income != null) {
+                boxoffice.innerHTML = "<strong>Résultats au box office : </strong>" + 
+                (data.worldwide_gross_income - data.budget) + 
+                " " + data.budget_currency;
+            } else {
+                boxoffice.innerHTML = "<strong>Résultats au box office : </strong> inconnu"
+            }
+            summary.innerHTML = "<strong>Résumé : </strong>" + data.long_description;
         })
 };
-

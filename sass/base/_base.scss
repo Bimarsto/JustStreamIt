@@ -1,0 +1,59 @@
+@import "../utils/variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    background-color: $colour-primary;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header{
+    display:flex;
+    align-items: center;
+    background-color: $colour-secondary;
+    width: 100%;
+    z-index: 5;
+    &__logo {
+        margin:10px;
+        background-color: $colour-accent-secondary;
+        height: 5em;
+    }
+    .nav{
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; 
+            background-color: $colour-secondary;
+        }
+        li{
+            float: left;
+            a{
+                display:block;
+                color: $colour-accent-secondary;
+                padding: 1.5em;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 1.5rem;
+
+                &:hover {
+                    background-color: $colour-accent-secondary;
+                    color: $colour-secondary;
+                }}
+        }
+    }
+}
+
+.category{
+    margin-top: 4em;
+    &__title{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3rem;
+    color: $colour-accent;
+    text-align: center;
+    }
+}
+

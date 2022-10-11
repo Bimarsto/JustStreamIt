@@ -1,0 +1,43 @@
+@import "../utils/variables";
+
+#bestMovie {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: $colour-accent;
+    display: grid;
+    grid-template-columns: 100px 47% 6% 47% 100px;
+    grid-template-rows: auto 200px 80px;
+    .bestMovieTitle{
+        justify-self: end;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 5em;
+        grid-column: 2;
+        grid-row: 1;
+        color: $colour-accent-secondary;
+    }
+    .bestMovieImage {
+        justify-self: start;
+        height: 400px;
+        grid-column: 4;
+        grid-row: 1 / 4;
+    }
+    .bestMovieInfo{
+        justify-self: end;
+        grid-column: 2;
+        grid-row: 3;
+        z-index: 0;
+    }
+    .bestMovieDesc{
+        justify-self: end;
+        text-align: end;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1.2em;
+        grid-column: 2;
+        grid-row: 2;
+        color: $colour-accent-secondary;
+    }
+}
+

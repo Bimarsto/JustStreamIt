@@ -1,0 +1,100 @@
+@import "../utils/variables";
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  &-content {
+    position: relative;
+    background-color: $colour-accent-secondary;
+    padding: 0;
+    border: 1px solid $colour-primary;
+    width: 80%;
+    max-width: 650px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    margin: 0 auto ; /* 15% from the top and centered */
+  }
+  &-header {
+    padding: 5px 16px;
+    background-color: $colour-accent;
+    color: $colour-accent-secondary;
+  }
+  &-body {
+    padding: 2px 16px;
+    display: grid;
+    grid-template-columns: auto 200px;
+    grid-template-rows: auto;
+    &>p{
+      margin: 5px;
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+    #modal-image{
+      margin-top: 30px;
+      grid-column: 2;
+      grid-row: span 10;
+      justify-self: center;
+    }
+    #modal-title{
+      grid-column: 1;
+      grid-row: 1;
+      font-size: 2rem;
+    }
+    #modal-summary{
+      grid-column: 1;
+    }
+    #modal-actor{
+      grid-column: 1;
+      grid-row: 7;
+    }
+    #modal-duration{
+      grid-column: 1;
+      grid-row: 8;
+    }
+    #modal-country{
+      grid-column: 1;
+      grid-row: 9;
+    }
+    #modal-boxoffice{
+      grid-column: 1;
+      grid-row: 10;
+    }
+    #modal-summary{
+      grid-column: span 2;
+      grid-row: 11;
+    }
+  }
+  &-footer {
+    padding: 2px 16px;
+    background-color: $colour-accent;
+    color: $colour-accent-secondary;
+    height: 20px;
+  }
+  .close {
+    color: $colour-primary;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    &:hover,
+    &:focus {
+      color: $colour-accent-secondary;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes animatetop {
+  from {top: -100%; opacity: 0}
+  to {top: 0; opacity: 1}
+}
